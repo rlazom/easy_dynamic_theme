@@ -1,58 +1,39 @@
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
+import 'theme.dart';
+import 'home.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp extends StatefulWidget {
-  @override
-  _MyAppState createState() => _MyAppState();
-}
+  SharedPreferences sp = await SharedPreferences.getInstance();
+  bool isDark = sp.getBool('is_dark');
 
-class _MyAppState extends State<MyApp> {
-  String _platformVersion = 'Unknown';
-
-  @override
-  void initState() {
-    super.initState();
-    initPlatformState();
+  ThemeMode initialThemeMode;
+  if (isDark != null) {
+    initialThemeMode = isDark ? ThemeMode.dark : ThemeMode.light;
   }
 
-  // Platform messages are asynchronous, so we initialize in an async method.
-  Future<void> initPlatformState() async {
-    String platformVersion;
-    // Platform messages may fail, so we use a try/catch PlatformException.
-    try {
-      platformVersion = await EasyDynamicTheme.platformVersion;
-    } on PlatformException {
-      platformVersion = 'Failed to get platform version.';
-    }
+  runApp(
+    EasyDynamicThemeWidget(
+      initialThemeMode: initialThemeMode,
+      child: MyApp(),
+    ),
+  );
+}
 
-    // If the widget was removed from the tree while the asynchronous platform
-    // message was in flight, we want to discard the reply rather than calling
-    // setState to update our non-existent appearance.
-    if (!mounted) return;
-
-    setState(() {
-      _platformVersion = platformVersion;
-    });
-  }
+class MyApp extends StatelessWidget {
+  final String title = 'Dynamic Theme';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Text('Running on: $_platformVersion\n'),
-        ),
-      ),
+        title: title,
+        theme: lightThemeData,
+        darkTheme: darkThemeData,
+        themeMode: EasyDynamicTheme.of(context).themeMode,
+        home: new MyHomePage(title: title,)
     );
   }
 }

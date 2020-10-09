@@ -1,3 +1,13 @@
 ## 0.0.1
 
-* TODO: Describe initial release.
+## Widgets
+
+- EasyDynamicThemeBtn
+
+## Features
+
+### Get the current ThemeMode
+- EasyDynamicTheme.of(context).themeMode
+
+### Toggle your app ThemeMode from (Dynamic -> Light -> Dark)
+- EasyDynamicTheme.of(context).switchTheme();
