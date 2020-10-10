@@ -1,6 +1,6 @@
 name: easy_dynamic_theme
-description: A new flutter plugin project.
-version: 0.0.1
+description: Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and of course, persist this choice in your device.
+version: 0.0.2
 homepage: "https://github.com/rlazom/easy_dynamic_theme.git"
 
 environment:
