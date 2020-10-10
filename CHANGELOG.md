@@ -1,3 +1,7 @@
+# 0.0.3
+
+- Minor fix in files format.
+
 # 0.0.2
 
 - Minor fix in documentation text.

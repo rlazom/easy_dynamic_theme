@@ -25,7 +25,7 @@ of the `pubspec.yaml` file as follow:
 ```yaml  
 dependencies:  
  flutter: sdk: flutter  
- easy_dynamic_theme: ^0.0.2
+ easy_dynamic_theme: ^0.0.3
  ```
  
 Then run the command `flutter packages get` on the console.  
