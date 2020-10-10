@@ -4,6 +4,9 @@ import 'package:flutter/services.dart';
 import 'src/services/shared_preferences_service.dart';
 export 'src/widgets/easy_dynamic_theme_btn.dart';
 
+
+/// Global InheritedWidget to access the data of the plugin
+/// Current Theme related data or methods
 class EasyDynamicTheme extends InheritedWidget {
   static const MethodChannel _channel =
       const MethodChannel('easy_dynamic_theme');
@@ -31,6 +34,7 @@ class EasyDynamicTheme extends InheritedWidget {
   }
 }
 
+/// Widget that will contains the whole app
 class EasyDynamicThemeWidget extends StatefulWidget {
   final ThemeMode initialThemeMode;
   final Widget child;
