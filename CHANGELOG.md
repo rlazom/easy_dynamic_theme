@@ -1,4 +1,9 @@
-## 0.0.1
+# 0.0.2
+
+- Minor fix in documentation text.
+- Added a project description.
+
+# 0.0.1
 
 ## Widgets
 
