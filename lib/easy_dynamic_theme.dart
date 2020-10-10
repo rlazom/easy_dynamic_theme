@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'src/services/shared_preferences_service.dart';
 export 'src/widgets/easy_dynamic_theme_btn.dart';
 
-
 /// Global InheritedWidget to access the data of the plugin
 /// Current Theme related data or methods
 class EasyDynamicTheme extends InheritedWidget {
