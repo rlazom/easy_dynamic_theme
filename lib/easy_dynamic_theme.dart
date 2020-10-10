@@ -5,7 +5,8 @@ import 'src/services/shared_preferences_service.dart';
 export 'src/widgets/easy_dynamic_theme_btn.dart';
 
 class EasyDynamicTheme extends InheritedWidget {
-  static const MethodChannel _channel = const MethodChannel('easy_dynamic_theme');
+  static const MethodChannel _channel =
+      const MethodChannel('easy_dynamic_theme');
   final _EasyDynamicThemeWidgetState data;
 
   static Future<String> get platformVersion async {
@@ -68,17 +69,17 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
     var newThemeMode = ThemeMode.system;
     var isNewThemeDark;
 
-    if(forceDark == null) {
+    if (forceDark == null) {
       newThemeMode = ThemeMode.light;
       isNewThemeDark = false;
     } else {
-      if(!forceDark) {
+      if (!forceDark) {
         newThemeMode = ThemeMode.dark;
         isNewThemeDark = true;
       }
     }
 
-    if(isNewThemeDark == null) {
+    if (isNewThemeDark == null) {
       _prefs.clearPref(SharePrefsAttribute.IS_DARK);
     } else {
       _prefs.setIsDark(isNewThemeDark);

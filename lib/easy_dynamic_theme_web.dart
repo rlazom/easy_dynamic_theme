@@ -32,7 +32,8 @@ class EasyDynamicThemeWeb {
       default:
         throw PlatformException(
           code: 'Unimplemented',
-          details: 'easy_dynamic_theme for web doesn\'t implement \'${call.method}\'',
+          details:
+              'easy_dynamic_theme for web doesn\'t implement \'${call.method}\'',
         );
     }
   }

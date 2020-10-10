@@ -33,7 +33,8 @@ class MyApp extends StatelessWidget {
         theme: lightThemeData,
         darkTheme: darkThemeData,
         themeMode: EasyDynamicTheme.of(context).themeMode,
-        home: new MyHomePage(title: title,)
-    );
+        home: new MyHomePage(
+          title: title,
+        ));
   }
 }
