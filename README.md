@@ -25,7 +25,7 @@ of the `pubspec.yaml` file as follow:
 ```yaml  
 dependencies:  
  flutter: sdk: flutter  
- easy_dynamic_theme: ^0.0.1
+ easy_dynamic_theme: ^0.0.2
  ```
  
 Then run the command `flutter packages get` on the console.  
@@ -87,21 +87,13 @@ class MyApp extends StatelessWidget {
 ThemeMode themeMode = EasyDynamicTheme.of(context).themeMode;  
 ```  
   
-The above example will return a value of the *enum* used by **MaterialApp** **ThemeMode** with one of the following values:  
-  
-#### ThemeMode values:
+The above example will return a value of the *enum* used by **MaterialApp's** **ThemeMode** with one of the following values:
 
-*Use either the light or dark theme based on what the user has selected in the system settings.*
+**system** - *Use either the light or dark theme based on what the user has selected in the system settings.*
 
-**system**  
-  
-*Always use the light mode regardless of system preference.*
+**light** - *Always use the light mode regardless of system preference.*
 
-**light**  
-  
-*Always use the dark mode (if available) regardless of system preference.*
-
-**dark**
+**dark** - *Always use the dark mode (if available) regardless of system preference.*
 
 ### What about some widgets?
 Right now we have the **EasyDynamicThemeBtn** widget, which is a flat icon that displays the icon according to the current theme of your app and allows you to switch between them.
