@@ -2,15 +2,13 @@
   
 This is a new and easy approach on Flutter Themes.
 
-Automatically you will get your OS defined Theme (Dynamic) or just force one of your preference (Light / Dark) and of course, persist this choice in your device.
+Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
 
 Easy peasy, don't you think? ;)
 
 ## Getting Started  
   
-For help getting started with Flutter, view our  
-[online documentation](https://flutter.dev/docs), which offers tutorials,  
-samples, guidance on mobile development, and a full API reference.  
+For help getting started with Flutter, view our [online documentation](https://flutter.dev/docs), which offers tutorials, samples, guidance on mobile development, and a full API reference.  
   
 ## Minimum Requirements  
   
