@@ -5,7 +5,6 @@ import 'home.dart';
 
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   runApp(
     EasyDynamicThemeWidget(
       child: MyApp(),

@@ -25,19 +25,73 @@ of the `pubspec.yaml` file as follow:
 ```yaml  
 dependencies:  
  flutter: sdk: flutter  
- easy_dynamic_theme: ^0.0.4
+ easy_dynamic_theme: ^0.0.5
  ```
  
 Then run the command `flutter packages get` on the console.  
   
 ## Examples of use  
   
-All magic occurs in your main.dart file  
+All magic occurs in your `main.dart` file  
   
 ```dart  
+import 'package:flutter/material.dart';
+import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
+import 'home.dart';
+
 void main() async { 
-  WidgetsFlutterBinding.ensureInitialized();  
+  runApp( 
+    EasyDynamicThemeWidget( 
+      child: MyApp(), 
+    ), 
+  );
+}  
   
+class MyApp extends StatelessWidget {  
+  final String title = 'EDT - Example'; 
+   
+  @override 
+  Widget build(BuildContext context) { 
+    return MaterialApp( 
+      title: title, 
+      theme: ThemeData.light(), 
+      darkTheme: ThemeData.dark(), 
+      themeMode: EasyDynamicThemeWidget.of(context).themeMode, 
+      home: new MyHomePage(title: title,) 
+    ); 
+  }
+}  
+```  
+  
+### How to use predefined Themes 
+  
+You can use your own defined themes as follows:
+
+In the file `themes.dart` define you *Themes*
+```dart  
+  import 'package:flutter/material.dart';
+  
+  var lightThemeData = new ThemeData(
+      primaryColor: Colors.blue,
+      textTheme: new TextTheme(button: TextStyle(color: Colors.white70)),
+      brightness: Brightness.light,
+      accentColor: Colors.blue);
+  
+  var darkThemeData = ThemeData(
+      primaryColor: Colors.blue,
+      textTheme: new TextTheme(button: TextStyle(color: Colors.black54)),
+      brightness: Brightness.dark,
+      accentColor: Colors.blue);
+```  
+  
+And then in your `main.dart` file
+```dart  
+import 'package:flutter/material.dart';
+import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
+import 'theme.dart';
+import 'home.dart';
+
+void main() async { 
   runApp( 
     EasyDynamicThemeWidget( 
       child: MyApp(), 

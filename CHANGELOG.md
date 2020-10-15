@@ -1,3 +1,8 @@
+# 0.0.5
+
+- Change the behavior for EasyDynamicThemeWidget on initialThemeMode parameter.
+- Change the behavior for _toggleTheme function on initialThemeMode parameter.
+
 # 0.0.4
 
 - Refactor and rename switchTheme function to changeTheme.

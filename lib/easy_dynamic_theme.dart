@@ -59,8 +59,12 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
 
   /// Loads the Shared Preferences data stored on your device to build the UI accordingly
   Future _loadSharedPreferences() async {
-    themeMode = widget.initialThemeMode;
     _prefs = new SharedPreferencesService();
+    if (widget.initialThemeMode != null) {
+      themeMode = widget.initialThemeMode;
+      _prefs.loadInstance();
+      return;
+    }
     await _prefs.loadInstance();
     bool isDark = _prefs.isDark();
     if (isDark != null) {
@@ -107,19 +111,19 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
   ///
   /// dynamic -> light -> dark -> dynamic ->
   void _toggleTheme() {
-    bool forceDark = _prefs.isDark();
-
-    ThemeMode newThemeMode = ThemeMode.system;
+    ThemeMode currentThemeMode = themeMode;
+    ThemeMode newThemeMode;
     bool isNewThemeDark;
 
-    if (forceDark == null) {
+    if (currentThemeMode == ThemeMode.system) {
       newThemeMode = ThemeMode.light;
       isNewThemeDark = false;
+    } else if (currentThemeMode == ThemeMode.light) {
+      newThemeMode = ThemeMode.dark;
+      isNewThemeDark = true;
     } else {
-      if (!forceDark) {
-        newThemeMode = ThemeMode.dark;
-        isNewThemeDark = true;
-      }
+      newThemeMode = ThemeMode.system;
+      isNewThemeDark = null;
     }
 
     if (isNewThemeDark == null) {
