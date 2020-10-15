@@ -65,9 +65,9 @@ class MyApp extends StatelessWidget {
   
 ### How to use predefined Themes 
   
-You can use your own defined themes as follows:
+You can use your own themes as follows:
 
-In the file `themes.dart` define you *Themes*
+In the file `themes.dart` define your *Themes*
 ```dart  
   import 'package:flutter/material.dart';
   
@@ -84,7 +84,7 @@ In the file `themes.dart` define you *Themes*
       accentColor: Colors.blue);
 ```  
   
-And then in your `main.dart` file
+And then in your `main.dart` file import your themes file and use them on **MaterialApp** attributes *theme* and *darkTheme*
 ```dart  
 import 'package:flutter/material.dart';
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
@@ -117,12 +117,12 @@ class MyApp extends StatelessWidget {
   
 ### How to change the ThemeMode in your app  
   
-You can use the function **switchTheme** from anywhere in your app.
+You can use the function **changeTheme** from anywhere in your app.
 
 This function have two optional parameters: *dynamic* and *dark*.
 If the value of *dynamic* is *true*, it takes precedence over *dark*.
 ```dart  
-  EasyDynamicTheme.of(context).switchTheme();
+  EasyDynamicTheme.of(context).changeTheme();
 ```  
   
   
