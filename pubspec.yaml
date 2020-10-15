@@ -1,7 +1,7 @@
 name: easy_dynamic_theme
-description: Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and of course, persist this choice in your device.
-version: 0.0.3
-homepage: "https://github.com/rlazom/easy_dynamic_theme.git"
+description: Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
+version: 0.0.4
+homepage: "https://github.com/rlazom/easy_dynamic_theme"
 
 environment:
   sdk: ">=2.7.0 <3.0.0"

@@ -25,7 +25,7 @@ of the `pubspec.yaml` file as follow:
 ```yaml  
 dependencies:  
  flutter: sdk: flutter  
- easy_dynamic_theme: ^0.0.3
+ easy_dynamic_theme: ^0.0.4
  ```
  
 Then run the command `flutter packages get` on the console.  
@@ -34,32 +34,19 @@ Then run the command `flutter packages get` on the console.
   
 All magic occurs in your main.dart file  
   
-The following code shows code commented as optional with which you can avoid "flickering" when switching from light to dark mode when the application loads.
-  
 ```dart  
 void main() async { 
   WidgetsFlutterBinding.ensureInitialized();  
-
-  ThemeMode initialThemeMode;
-  
-  // [OPTIONAL - BEGIN]
-  SharedPreferences sp = await SharedPreferences.getInstance();
-  bool isDark = sp.getBool('is_dark'); 
-  if (isDark != null) { 
-    initialThemeMode = isDark ? ThemeMode.dark : ThemeMode.light;
-  }
-  // [OPTIONAL - END]
   
   runApp( 
     EasyDynamicThemeWidget( 
-      initialThemeMode: initialThemeMode, 
       child: MyApp(), 
     ), 
   );
 }  
   
 class MyApp extends StatelessWidget {  
-  final String title = 'Dynamic Theme'; 
+  final String title = 'EDT - Example'; 
    
   @override 
   Widget build(BuildContext context) { 
@@ -74,8 +61,12 @@ class MyApp extends StatelessWidget {
 }  
 ```  
   
-### How to toggle from dynamic/light/dark in your app  
+### How to change the ThemeMode in your app  
   
+You can use the function **switchTheme** from anywhere in your app.
+
+This function have two optional parameters: *dynamic* and *dark*.
+If the value of *dynamic* is *true*, it takes precedence over *dark*.
 ```dart  
   EasyDynamicTheme.of(context).switchTheme();
 ```  

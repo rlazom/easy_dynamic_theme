@@ -16,7 +16,7 @@ class EasyDynamicThemeBtn extends StatelessWidget {
     return RawMaterialButton(
       shape: CircleBorder(),
       onPressed: () {
-        EasyDynamicTheme.of(context).switchTheme();
+        EasyDynamicTheme.of(context).changeTheme();
       },
       child: new Padding(
         padding: const EdgeInsets.all(12.0),

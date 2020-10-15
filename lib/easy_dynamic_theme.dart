@@ -49,13 +49,15 @@ class EasyDynamicThemeWidget extends StatefulWidget {
 class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
   ThemeMode themeMode;
   SharedPreferencesService _prefs;
+  Future fInit;
 
   @override
   initState() {
     super.initState();
-    _loadSharedPreferences();
+    fInit = _loadSharedPreferences();
   }
 
+  /// Loads the Shared Preferences data stored on your device to build the UI accordingly
   Future _loadSharedPreferences() async {
     themeMode = widget.initialThemeMode;
     _prefs = new SharedPreferencesService();
@@ -66,11 +68,49 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
     }
   }
 
-  void switchTheme() {
+  /// Change your current ThemeMode
+  ///
+  /// If you do not send any parameter it will toggle in the following order:
+  ///
+  /// dynamic -> light -> dark -> dynamic ->
+  ///
+  /// Or you can define boolean values for the parameters "[dynamic]" and/or "[dark]"
+  ///
+  /// If the value of "[dynamic]" is true, it takes precedence over "[dark]"
+  void changeTheme({bool dynamic, bool dark}) {
+    if(dynamic == null && dark == null) {
+      _toggleTheme();
+      return;
+    }
+
+    ThemeMode newThemeMode;
+    bool forceDark = _prefs.isDark() ?? false;
+
+    if(dark != null || dynamic != null) {
+      forceDark = dark == null ? forceDark : dark;
+      newThemeMode = (dynamic ?? false) ? ThemeMode.system
+          : forceDark ? ThemeMode.dark : ThemeMode.light;
+    }
+
+    if (newThemeMode == ThemeMode.system) {
+      _prefs.clearPref(SharePrefsAttribute.IS_DARK);
+    } else {
+      _prefs.setIsDark(forceDark);
+    }
+
+    setState(() {
+      themeMode = newThemeMode;
+    });
+  }
+
+  /// Toggle from your current ThemeMode in the following order:
+  ///
+  /// dynamic -> light -> dark -> dynamic ->
+  void _toggleTheme() {
     bool forceDark = _prefs.isDark();
 
-    var newThemeMode = ThemeMode.system;
-    var isNewThemeDark;
+    ThemeMode newThemeMode = ThemeMode.system;
+    bool isNewThemeDark;
 
     if (forceDark == null) {
       newThemeMode = ThemeMode.light;
@@ -96,9 +136,17 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
   @override
   Widget build(BuildContext context) {
     themeMode = themeMode ?? ThemeMode.system;
-    return EasyDynamicTheme(
-      data: this,
-      child: widget.child,
+    return FutureBuilder(
+      future: fInit,
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        if(snapshot.connectionState == ConnectionState.done) {
+          return EasyDynamicTheme(
+            data: this,
+            child: widget.child,
+          );
+        }
+        return Container();
+      },
     );
   }
 }
