@@ -3,7 +3,6 @@ import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'theme.dart';
 import 'home.dart';
 
-
 void main() async {
   runApp(
     EasyDynamicThemeWidget(

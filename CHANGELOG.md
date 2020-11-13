@@ -1,33 +1,39 @@
+# 1.0.0
+
+### Features
+- Added new widget: **EasyDynamicThemeSwitch**.
+### Documentation
+- Files formatted according to dartfmt.
+
 # 0.0.5
 
-- Change the behavior for EasyDynamicThemeWidget on initialThemeMode parameter.
-- Change the behavior for _toggleTheme function on initialThemeMode parameter.
+### Enhances
+- Changed the behavior for **EasyDynamicThemeWidget** on initialThemeMode parameter.
+- Changed the behavior for **_toggleTheme** function on initialThemeMode parameter.
 
 # 0.0.4
 
-- Refactor and rename switchTheme function to changeTheme.
-- Wrap EasyDynamicThemeWidget build function in a FutureBuilder.
-- Add documentation for changeTheme function.
+### Enhances
+- Refactored and renamed **switchTheme** function to **changeTheme**.
+- Wrapped **EasyDynamicThemeWidget** build function in a FutureBuilder.
+### Documentation
+- Added documentation for *changeTheme* function.
 
 # 0.0.3
 
-- Minor fix in files format.
+### Documentation
+- Files formatted according to dartfmt.
 
 # 0.0.2
 
-- Minor fix in documentation text.
-- Add project description.
+### Documentation
+- Documentation text changed.
+- Added project description.
 
 # 0.0.1
 
-## Widgets
-
-- EasyDynamicThemeBtn
-
-## Features
-
-### Get the current ThemeMode
-- EasyDynamicTheme.of(context).themeMode
-
-### Toggle your app ThemeMode from (Dynamic -> Light -> Dark)
-- EasyDynamicTheme.of(context).switchTheme();
+### Features
+- Added new widget: **EasyDynamicThemeBtn**.
+- Added new methods: 
+  - **EasyDynamicTheme.of(context).themeMode**
+  - **EasyDynamicTheme.of(context).switchTheme()**

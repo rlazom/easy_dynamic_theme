@@ -23,7 +23,7 @@ of the `pubspec.yaml` file as follow:
 ```yaml  
 dependencies:  
  flutter: sdk: flutter  
- easy_dynamic_theme: ^0.0.5
+ easy_dynamic_theme: ^1.0.0
  ```
  
 Then run the command `flutter packages get` on the console.  
@@ -125,7 +125,8 @@ If the value of *dynamic* is *true*, it takes precedence over *dark*.
   
   
 ### How to get your app current theme  
-  
+
+#### Current app ThemeMode:
 ```dart  
 ThemeMode themeMode = EasyDynamicTheme.of(context).themeMode;  
 ```  
@@ -138,5 +139,17 @@ The above example will return a value of the *enum* used by **MaterialApp's** **
 
 **dark** - *Always use the dark mode (if available) regardless of system preference.*
 
-### What about some widgets?
-Right now we have the **EasyDynamicThemeBtn** widget, which is a flat icon that displays the icon according to the current theme of your app and allows you to switch between them.
+#### Current Context brightness:
+```dart  
+Brightness brightness = Theme.of(context).brightness;  
+```  
+
+Or if you want to know if your widget is dark mode based, you can achieve it with:
+```dart  
+bool isDarkModeOn = Theme.of(context).brightness == Brightness.dark;  
+```  
+
+### What about some out-of-the-box widgets?
+#### Right now we have:
+- **EasyDynamicThemeBtn**, which is (kind of) a *FlatButton* that displays the icon according to the current theme of your app and allows you to switch between them.
+- **EasyDynamicThemeSwitch**, which is a *Switch* widget, based on the current theme's brightness of your context and allows you to switch between **light/dark** them.

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'src/services/shared_preferences_service.dart';
 export 'src/widgets/easy_dynamic_theme_btn.dart';
+export 'src/widgets/easy_dynamic_theme_switch.dart';
 
 /// Global InheritedWidget to access the data of the plugin
 /// Current Theme related data or methods
@@ -82,7 +83,7 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
   ///
   /// If the value of "[dynamic]" is true, it takes precedence over "[dark]"
   void changeTheme({bool dynamic, bool dark}) {
-    if(dynamic == null && dark == null) {
+    if (dynamic == null && dark == null) {
       _toggleTheme();
       return;
     }
@@ -90,10 +91,13 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
     ThemeMode newThemeMode;
     bool forceDark = _prefs.isDark() ?? false;
 
-    if(dark != null || dynamic != null) {
+    if (dark != null || dynamic != null) {
       forceDark = dark == null ? forceDark : dark;
-      newThemeMode = (dynamic ?? false) ? ThemeMode.system
-          : forceDark ? ThemeMode.dark : ThemeMode.light;
+      newThemeMode = (dynamic ?? false)
+          ? ThemeMode.system
+          : forceDark
+              ? ThemeMode.dark
+              : ThemeMode.light;
     }
 
     if (newThemeMode == ThemeMode.system) {
@@ -143,7 +147,7 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
     return FutureBuilder(
       future: fInit,
       builder: (BuildContext context, AsyncSnapshot snapshot) {
-        if(snapshot.connectionState == ConnectionState.done) {
+        if (snapshot.connectionState == ConnectionState.done) {
           return EasyDynamicTheme(
             data: this,
             child: widget.child,
