@@ -54,7 +54,7 @@ class MyApp extends StatelessWidget {
       title: title, 
       theme: ThemeData.light(), 
       darkTheme: ThemeData.dark(), 
-      themeMode: EasyDynamicThemeWidget.of(context).themeMode, 
+      themeMode: EasyDynamicTheme.of(context).themeMode, 
       home: new MyHomePage(title: title,) 
     ); 
   }
@@ -100,13 +100,13 @@ void main() async {
 class MyApp extends StatelessWidget {  
   final String title = 'EDT - Example'; 
    
-  @override 
+  @override
   Widget build(BuildContext context) { 
     return MaterialApp( 
       title: title, 
       theme: lightThemeData, 
       darkTheme: darkThemeData, 
-      themeMode: EasyDynamicThemeWidget.of(context).themeMode, 
+      themeMode: EasyDynamicTheme.of(context).themeMode, 
       home: new MyHomePage(title: title,) 
     ); 
   }
