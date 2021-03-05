@@ -12,11 +12,11 @@ extension ParseToString on SharePrefsAttribute {
 }
 
 class SharedPreferencesService {
-  SharedPreferences _prefs;
+  late SharedPreferences _prefs;
 
   Future loadInstance() async => _prefs = await SharedPreferences.getInstance();
 
-  bool isDark() => _prefs.getBool(SharePrefsAttribute.IS_DARK.toShortString());
+  bool? isDark() => _prefs.getBool(SharePrefsAttribute.IS_DARK.toShortString());
 
   setIsDark(bool value) =>
       _prefs.setBool(SharePrefsAttribute.IS_DARK.toShortString(), value);

@@ -12,20 +12,20 @@ class EasyDynamicTheme extends InheritedWidget {
       const MethodChannel('easy_dynamic_theme');
   final _EasyDynamicThemeWidgetState data;
 
-  static Future<String> get platformVersion async {
-    final String version = await _channel.invokeMethod('getPlatformVersion');
+  static Future<String?> get platformVersion async {
+    final String? version = await _channel.invokeMethod('getPlatformVersion');
     return version;
   }
 
   const EasyDynamicTheme({
-    Key key,
-    @required this.data,
-    @required Widget child,
-  })  : assert(child != null),
+    Key? key,
+    required this.data,
+    required Widget child,
+  })   : assert(child != null),
         super(key: key, child: child);
 
   static _EasyDynamicThemeWidgetState of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<EasyDynamicTheme>().data;
+    return context.dependOnInheritedWidgetOfExactType<EasyDynamicTheme>()!.data;
   }
 
   @override
@@ -36,10 +36,10 @@ class EasyDynamicTheme extends InheritedWidget {
 
 /// Widget that will contains the whole app
 class EasyDynamicThemeWidget extends StatefulWidget {
-  final ThemeMode initialThemeMode;
+  final ThemeMode? initialThemeMode;
   final Widget child;
 
-  EasyDynamicThemeWidget({Key key, this.initialThemeMode, @required this.child})
+  EasyDynamicThemeWidget({Key? key, this.initialThemeMode, required this.child})
       : assert(child != null),
         super(key: key);
 
@@ -48,9 +48,9 @@ class EasyDynamicThemeWidget extends StatefulWidget {
 }
 
 class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
-  ThemeMode themeMode;
-  SharedPreferencesService _prefs;
-  Future fInit;
+  ThemeMode? themeMode;
+  late SharedPreferencesService _prefs;
+  Future? fInit;
 
   @override
   initState() {
@@ -67,7 +67,7 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
       return;
     }
     await _prefs.loadInstance();
-    bool isDark = _prefs.isDark();
+    bool? isDark = _prefs.isDark();
     if (isDark != null) {
       themeMode = isDark ? ThemeMode.dark : ThemeMode.light;
     }
@@ -82,13 +82,13 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
   /// Or you can define boolean values for the parameters "[dynamic]" and/or "[dark]"
   ///
   /// If the value of "[dynamic]" is true, it takes precedence over "[dark]"
-  void changeTheme({bool dynamic, bool dark}) {
+  void changeTheme({bool? dynamic, bool? dark}) {
     if (dynamic == null && dark == null) {
       _toggleTheme();
       return;
     }
 
-    ThemeMode newThemeMode;
+    ThemeMode? newThemeMode;
     bool forceDark = _prefs.isDark() ?? false;
 
     if (dark != null || dynamic != null) {
@@ -115,9 +115,9 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
   ///
   /// dynamic -> light -> dark -> dynamic ->
   void _toggleTheme() {
-    ThemeMode currentThemeMode = themeMode;
+    ThemeMode? currentThemeMode = themeMode;
     ThemeMode newThemeMode;
-    bool isNewThemeDark;
+    bool? isNewThemeDark;
 
     if (currentThemeMode == ThemeMode.system) {
       newThemeMode = ThemeMode.light;

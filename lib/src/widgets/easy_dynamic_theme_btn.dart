@@ -19,7 +19,7 @@ class EasyDynamicThemeBtn extends StatelessWidget {
       child: new Padding(
         padding: const EdgeInsets.all(12.0),
         child: new Icon(_getIcon(context),
-            color: Theme.of(context).textTheme.button.color),
+            color: Theme.of(context).textTheme.button!.color),
       ),
     );
   }

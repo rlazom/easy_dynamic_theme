@@ -1,3 +1,8 @@
+# 2.0.0
+
+### Features
+- Added null safety support.
+
 # 1.0.0
 
 ### Features
