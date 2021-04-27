@@ -8,7 +8,8 @@ export 'widgets/easy_dynamic_theme_switch.dart';
 /// Global InheritedWidget to access the data of the plugin
 /// Current Theme related data or methods
 class EasyDynamicTheme extends InheritedWidget {
-  static const MethodChannel _channel = const MethodChannel('easy_dynamic_theme');
+  static const MethodChannel _channel =
+      const MethodChannel('easy_dynamic_theme');
   final _EasyDynamicThemeWidgetState data;
 
   static Future<String?> get platformVersion async {
@@ -37,7 +38,8 @@ class EasyDynamicThemeWidget extends StatefulWidget {
   final ThemeMode? initialThemeMode;
   final Widget child;
 
-  EasyDynamicThemeWidget({Key? key, this.initialThemeMode, required this.child}) : super(key: key);
+  EasyDynamicThemeWidget({Key? key, this.initialThemeMode, required this.child})
+      : super(key: key);
 
   @override
   _EasyDynamicThemeWidgetState createState() => _EasyDynamicThemeWidgetState();
