@@ -1,3 +1,10 @@
+# 2.0.1
+
+### Features
+- Added Windows compatibility
+### Enhances
+- Refactor files structure
+
 # 2.0.0
 
 ### Features

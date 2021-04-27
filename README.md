@@ -4,9 +4,15 @@ This is a new and easy approach on Flutter Themes.
 
 Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
 
-![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme) ![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme) ![GitHub top language](https://img.shields.io/github/languages/top/rlazom/easy_dynamic_theme
+![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme) ![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme) ![GitHub top language](https://img.shields.io/github/languages/top/rlazom/easy_dynamic_theme)
 
 Easy peasy, don't you think? ;)
+
+<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com/rlazom/easy_dynamic_theme/demo/easy_dynamic_theme.png?raw=true"/></a> 
+
+## Demo  
+
+<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com/rlazom/easy_dynamic_theme/demo/widgets.gif?raw=true"/></a>
 
 ## Getting Started  
   
@@ -15,7 +21,7 @@ For help getting started with Flutter, view our [online documentation](https://f
 ## Minimum Requirements  
   
 - Dart SDK: >=2.12.0 <3.0.0  
-- Flutter: >= 1.20.0 
+- Flutter: >= 1.20.0  
   
 ## Installation and Usage  
   
@@ -24,8 +30,9 @@ of the `pubspec.yaml` file as follow:
   
 ```yaml  
 dependencies:  
- flutter: sdk: flutter  
- easy_dynamic_theme: ^1.0.0
+  flutter: 
+    sdk: flutter  
+ easy_dynamic_theme: ^2.0.1
  ```
  
 Then run the command `flutter packages get` on the console.  
