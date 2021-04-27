@@ -4,6 +4,8 @@ This is a new and easy approach on Flutter Themes.
 
 Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
 
+![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme) ![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme) ![GitHub top language](https://img.shields.io/github/languages/top/rlazom/easy_dynamic_theme
+
 Easy peasy, don't you think? ;)
 
 ## Getting Started  
@@ -12,8 +14,8 @@ For help getting started with Flutter, view our [online documentation](https://f
   
 ## Minimum Requirements  
   
-- Dart SDK: >=2.7.0 <3.0.0  
-- Flutter: >= 1.17.0  
+- Dart SDK: >=2.12.0 <3.0.0  
+- Flutter: >= 1.20.0 
   
 ## Installation and Usage  
   
