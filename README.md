@@ -8,11 +8,11 @@ Automatically get your OS defined Theme (Dynamic), force your prefered one (Ligh
 
 Easy peasy, don't you think? ;)
 
-<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com/rlazom/easy_dynamic_theme/demo/easy_dynamic_theme.png?raw=true"/></a> 
+<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com//rlazom/easy_dynamic_theme/blob/master/demo/easy_dynamic_theme.png?raw=true"/></a>
 
 ## Demo  
 
-<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com/rlazom/easy_dynamic_theme/demo/widgets.gif?raw=true"/></a>
+<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com//rlazom/easy_dynamic_theme/blob/master/demo/widgets.gif?raw=true"/></a>
 
 ## Getting Started  
   
