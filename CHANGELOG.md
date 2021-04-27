@@ -1,3 +1,9 @@
+# 2.0.2
+
+### Documentation
+- Fix images in README file
+- Files formatted according to dartfmt.
+
 # 2.0.1
 
 ### Features
