@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'dart:ui';
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
+import 'package:easy_dynamic_theme_example/blur_container.dart';
 
 class MyHomePage extends StatefulWidget {
   final String title;
@@ -30,10 +30,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: [
-          EasyDynamicThemeSwitch(),
-          EasyDynamicThemeBtn(),
-        ],
       ),
       body: Stack(
         alignment: Alignment.center,
@@ -46,31 +42,54 @@ class _MyHomePageState extends State<MyHomePage> {
           new Container(
             color: Theme.of(context).scaffoldBackgroundColor.withOpacity(0.6),
           ),
-          new ClipRect(
-            child: new Container(
-              decoration: BoxDecoration(border: Border.all(width: 2)),
-              child: new BackdropFilter(
-                filter: new ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-                child: new Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: new Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      new Text(
-                        'You have pushed the button this many times:',
-                        style: Theme.of(context).textTheme.subtitle1,
-                        textAlign: TextAlign.justify,
+          Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Container(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    BlurContainer(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          EasyDynamicThemeSwitch(),
+                          Text('EasyDynamicThemeSwitch'),
+                        ],
                       ),
-                      new Text(
-                        '$_counter',
-                        style: Theme.of(context).textTheme.headline4,
+                    ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    BlurContainer(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          EasyDynamicThemeBtn(),
+                          Text('EasyDynamicThemeBtn'),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-            ),
+              BlurContainer(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    new Text(
+                      'You have pushed the button this many times:',
+                      style: Theme.of(context).textTheme.subtitle1,
+                      textAlign: TextAlign.justify,
+                    ),
+                    new Text(
+                      '$_counter',
+                      style: Theme.of(context).textTheme.headline4,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),
