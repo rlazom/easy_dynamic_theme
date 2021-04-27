@@ -1,0 +1,59 @@
+name: easy_dynamic_theme
+
+on:
+  # Trigger the workflow on push
+  # but only for the master branch
+  push:
+    branches:
+      - master
+      - develop
+  pull_request:
+    branches:
+      - master
+      - develop
+
+jobs:
+  test:
+    # Job name is Running Tests
+    name: Tests
+    # This job runs on Linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.0.3'
+          channel: 'stable'
+      - run: flutter pub get
+      - run: flutter test --no-pub --coverage
+      - run: bash <(curl -s https://codecov.io/bash) -t 2854257d-20d6-4d73-a56c-f4ee1c85e9fc
+
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.0.3'
+          channel: 'stable'
+      - run: flutter pub get
+      - name: Analyze lib
+        run: flutter analyze lib
+      - name: Analyze test
+        run: flutter analyze test
+
+  format:
+    name: Format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.0.4'
+          channel: 'stable'
+      - run: flutter pub get
+      - name: Format lib
+        run: flutter format lib --set-exit-if-changed
+      - name: Format test
+        run: flutter format test --set-exit-if-changed
