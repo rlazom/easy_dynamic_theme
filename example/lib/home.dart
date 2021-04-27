@@ -5,7 +5,7 @@ import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 class MyHomePage extends StatefulWidget {
   final String title;
 
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key,required this.title}) : super(key: key);
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(Icons.add, color: Theme.of(context).textTheme.button.color),
+        child: Icon(Icons.add, color: Theme.of(context).textTheme.button?.color),
       ),
     );
   }

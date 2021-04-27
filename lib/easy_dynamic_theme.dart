@@ -21,8 +21,7 @@ class EasyDynamicTheme extends InheritedWidget {
     Key? key,
     required this.data,
     required Widget child,
-  })   : assert(child != null),
-        super(key: key, child: child);
+  })   : super(key: key, child: child);
 
   static _EasyDynamicThemeWidgetState of(BuildContext context) {
     return context.dependOnInheritedWidgetOfExactType<EasyDynamicTheme>()!.data;
@@ -40,8 +39,7 @@ class EasyDynamicThemeWidget extends StatefulWidget {
   final Widget child;
 
   EasyDynamicThemeWidget({Key? key, this.initialThemeMode, required this.child})
-      : assert(child != null),
-        super(key: key);
+      : super(key: key);
 
   @override
   _EasyDynamicThemeWidgetState createState() => _EasyDynamicThemeWidgetState();

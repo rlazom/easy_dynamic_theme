@@ -14,7 +14,6 @@ class EasyDynamicThemeWeb {
     final MethodChannel channel = MethodChannel(
       'easy_dynamic_theme',
       const StandardMethodCodec(),
-      registrar.messenger,
     );
 
     final pluginInstance = EasyDynamicThemeWeb();
@@ -28,7 +27,6 @@ class EasyDynamicThemeWeb {
     switch (call.method) {
       case 'getPlatformVersion':
         return getPlatformVersion();
-        break;
       default:
         throw PlatformException(
           code: 'Unimplemented',
