@@ -4,7 +4,13 @@ This is a new and easy approach on Flutter Themes.
 
 Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
 
-![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme) ![GitHub top language](https://img.shields.io/github/languages/top/rlazom/easy_dynamic_theme)
+![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme) 
+![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme)
+![GitHub top language](https://img.shields.io/github/languages/top/rlazom/easy_dynamic_theme)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5f373592e0b3471e8f62229df15de60f)](https://www.codacy.com/manual/rlazom/easy_dynamic_theme?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rlazom/easy_dynamic_theme&amp;utm_campaign=Badge_Grade) 
+![flutter tests](https://github.com/rlazom/easy_dynamic_theme/workflows/easy_dynamic_theme/badge.svg?branch=master) 
+[![codecov](https://codecov.io/gh/rlazom/easy_dynamic_theme/branch/master/graph/badge.svg)](https://codecov.io/gh/rlazom/easy_dynamic_theme)
+
 
 Easy peasy, don't you think? ;)
 
