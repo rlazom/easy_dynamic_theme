@@ -4,12 +4,11 @@ This is a new and easy approach on Flutter Themes.
 
 Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
 
-![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme) 
-![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme)
-![GitHub top language](https://img.shields.io/github/languages/top/rlazom/easy_dynamic_theme)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5f373592e0b3471e8f62229df15de60f)](https://www.codacy.com/manual/rlazom/easy_dynamic_theme?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rlazom/easy_dynamic_theme&amp;utm_campaign=Badge_Grade) 
+![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme)
 ![flutter tests](https://github.com/rlazom/easy_dynamic_theme/workflows/easy_dynamic_theme/badge.svg?branch=master) 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5f373592e0b3471e8f62229df15de60f)](https://www.codacy.com/manual/rlazom/easy_dynamic_theme?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rlazom/easy_dynamic_theme&amp;utm_campaign=Badge_Grade)  
 [![codecov](https://codecov.io/gh/rlazom/easy_dynamic_theme/branch/master/graph/badge.svg)](https://codecov.io/gh/rlazom/easy_dynamic_theme)
+![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme)
 
 
 Easy peasy, don't you think? ;)
@@ -38,7 +37,7 @@ of the `pubspec.yaml` file as follow:
 dependencies:  
   flutter: 
     sdk: flutter  
- easy_dynamic_theme: ^2.0.2
+ easy_dynamic_theme: ^2.1.0
  ```
  
 Then run the command `flutter packages get` on the console.  
