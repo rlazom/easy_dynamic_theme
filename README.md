@@ -5,15 +5,15 @@ This is a new and easy approach on Flutter Themes.
 Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
 
 ![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme)
-![flutter tests](https://github.com/rlazom/easy_dynamic_theme/workflows/easy_dynamic_theme/badge.svg?branch=master) 
+![flutter tests](https://github.com/rlazom/easy_dynamic_theme/workflows/easy_dynamic_theme/badge.svg?branch=master)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5f373592e0b3471e8f62229df15de60f)](https://www.codacy.com/manual/rlazom/easy_dynamic_theme?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rlazom/easy_dynamic_theme&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/rlazom/easy_dynamic_theme/branch/master/graph/badge.svg)](https://codecov.io/gh/rlazom/easy_dynamic_theme)
 ![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme)
 
-
 Easy peasy, don't you think? ;)
 
-<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com//rlazom/easy_dynamic_theme/blob/master/demo/easy_dynamic_theme.png?raw=true"/></a>
+<a href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com//rlazom/easy_dynamic_theme/blob/master/demo/easy_dynamic_theme.png?raw=true"/></a>
+![easy_dynamic_theme.](/blob/master/demo/easy_dynamic_theme.png)
 
 ## Demo  
 
@@ -39,7 +39,7 @@ dependencies:
     sdk: flutter  
  easy_dynamic_theme: ^2.1.0
  ```
- 
+
 Then run the command `flutter packages get` on the console.  
   
 ## Examples of use  
@@ -75,11 +75,12 @@ class MyApp extends StatelessWidget {
 }  
 ```  
   
-### How to use predefined Themes 
+### How to use predefined Themes
   
 You can use your own themes as follows:
 
 In the file `themes.dart` define your *Themes*
+
 ```dart  
   import 'package:flutter/material.dart';
   
@@ -97,6 +98,7 @@ In the file `themes.dart` define your *Themes*
 ```  
   
 And then in your `main.dart` file import your themes file and use them on **MaterialApp** attributes *theme* and *darkTheme*
+
 ```dart  
 import 'package:flutter/material.dart';
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
@@ -133,14 +135,15 @@ You can use the function **changeTheme** from anywhere in your app.
 
 This function have two optional parameters: *dynamic* and *dark*.
 If the value of *dynamic* is *true*, it takes precedence over *dark*.
+
 ```dart  
   EasyDynamicTheme.of(context).changeTheme();
 ```  
   
-  
 ### How to get your app current theme  
 
-#### Current app ThemeMode:
+#### Current app ThemeMode
+
 ```dart  
 ThemeMode themeMode = EasyDynamicTheme.of(context).themeMode;  
 ```  
@@ -153,17 +156,21 @@ The above example will return a value of the *enum* used by **MaterialApp's** **
 
 **dark** - *Always use the dark mode (if available) regardless of system preference.*
 
-#### Current Context brightness:
+#### Current Context brightness
+
 ```dart  
 Brightness brightness = Theme.of(context).brightness;  
 ```  
 
 Or if you want to know if your widget is dark mode based, you can achieve it with:
+
 ```dart  
 bool isDarkModeOn = Theme.of(context).brightness == Brightness.dark;  
 ```  
 
 ### What about some out-of-the-box widgets?
-#### Right now we have:
+
+#### Right now we have
+
 - **EasyDynamicThemeBtn**, which is (kind of) a *FlatButton* that displays the icon according to the current theme of your app and allows you to switch between them.
 - **EasyDynamicThemeSwitch**, which is a *Switch* widget, based on the current theme's brightness of your context and allows you to switch between **light/dark** them.
