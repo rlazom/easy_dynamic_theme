@@ -15,3 +15,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  #  Mock library for Dart
+  mockito: ^5.0.7

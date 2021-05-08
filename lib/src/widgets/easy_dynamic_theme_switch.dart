@@ -5,9 +5,9 @@ class EasyDynamicThemeSwitch extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Switch(
+        key: Key('EasyDynamicThemeSwitch'),
         value: Theme.of(context).brightness == Brightness.dark,
-        onChanged: (bool value) {
-          EasyDynamicTheme.of(context).changeTheme(dark: value);
-        });
+        onChanged: (bool value) =>
+            EasyDynamicTheme.of(context).changeTheme(dark: value));
   }
 }

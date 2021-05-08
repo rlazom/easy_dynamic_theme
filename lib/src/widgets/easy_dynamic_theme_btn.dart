@@ -14,6 +14,7 @@ class EasyDynamicThemeBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
+      key: Key('EasyDynamicThemeBtn'),
       shape: CircleBorder(),
       onPressed: EasyDynamicTheme.of(context).changeTheme,
       child: new Padding(

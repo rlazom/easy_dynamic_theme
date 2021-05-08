@@ -151,7 +151,9 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
             child: widget.child,
           );
         }
-        return Container();
+        return Container(
+          key: Key('loading'),
+        );
       },
     );
   }
