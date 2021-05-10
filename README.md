@@ -6,18 +6,17 @@ Automatically get your OS defined Theme (Dynamic), force your prefered one (Ligh
 
 ![Pub Version](https://img.shields.io/pub/v/easy_dynamic_theme)
 ![flutter tests](https://github.com/rlazom/easy_dynamic_theme/workflows/easy_dynamic_theme/badge.svg?branch=master)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5f373592e0b3471e8f62229df15de60f)](https://www.codacy.com/manual/rlazom/easy_dynamic_theme?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rlazom/easy_dynamic_theme&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f373592e0b3471e8f62229df15de60f)](https://app.codacy.com/gh/rlazom/easy_dynamic_theme?utm_source=github.com&utm_medium=referral&utm_content=rlazom/easy_dynamic_theme&utm_campaign=Badge_Grade_Settings)
 [![codecov](https://codecov.io/gh/rlazom/easy_dynamic_theme/branch/master/graph/badge.svg)](https://codecov.io/gh/rlazom/easy_dynamic_theme)
 ![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme)
 
 Easy peasy, don't you think? ;)
 
 <a href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com//rlazom/easy_dynamic_theme/blob/master/demo/easy_dynamic_theme.png?raw=true"/></a>
-![easy_dynamic_theme.](/blob/master/demo/easy_dynamic_theme.png)
 
 ## Demo  
 
-<a  href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com//rlazom/easy_dynamic_theme/blob/master/demo/widgets.gif?raw=true"/></a>
+<a href="https://pub.dev/packages/easy_dynamic_theme"><img src="https://github.com//rlazom/easy_dynamic_theme/blob/master/demo/widgets.gif?raw=true"/></a>
 
 ## Getting Started  
   
