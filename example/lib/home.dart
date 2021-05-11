@@ -70,6 +70,18 @@ class _MyHomePageState extends State<MyHomePage> {
                         ],
                       ),
                     ),
+                    SizedBox(
+                      height: 16,
+                    ),
+                    BlurContainer(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          EasyDynamicThemeAutoSwitch(),
+                          Text('EasyDynamicThemeAutoSwitch'),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
