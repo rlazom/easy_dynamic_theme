@@ -3,12 +3,18 @@ import 'package:flutter/material.dart';
 
 class DefaultAppWrapper extends StatelessWidget {
   final Widget child;
+  final ThemeMode? initialThemeMode;
 
-  const DefaultAppWrapper({Key? key, required this.child}) : super(key: key);
+  const DefaultAppWrapper({
+    Key? key,
+    required this.child,
+    this.initialThemeMode,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return EasyDynamicThemeWidget(
+      initialThemeMode: initialThemeMode,
       child: StatefulBuilder(
         builder: (BuildContext context, StateSetter setState) {
           return MaterialApp(
