@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'services/shared_preferences_service.dart';
 export 'widgets/easy_dynamic_theme_btn.dart';
 export 'widgets/easy_dynamic_theme_switch.dart';
@@ -8,14 +7,7 @@ export 'widgets/easy_dynamic_theme_switch.dart';
 /// Global InheritedWidget to access the data of the plugin
 /// Current Theme related data or methods
 class EasyDynamicTheme extends InheritedWidget {
-  static const MethodChannel _channel =
-      const MethodChannel('easy_dynamic_theme');
   final _EasyDynamicThemeWidgetState data;
-
-  static Future<String?> get platformVersion async {
-    final String? version = await _channel.invokeMethod('getPlatformVersion');
-    return version;
-  }
 
   const EasyDynamicTheme({
     Key? key,
