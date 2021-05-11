@@ -1,4 +1,13 @@
-# 2.1.0
+# 2.2.0
+
+- **Features**
+  - Added new widget: **EasyDynamicThemeAutoSwitch**.
+  - Added tests to increase coverage
+
+- **Enhances**
+  - Added tests to increase coverage
+  
+## 2.1.0
 
 - **Enhances**
   - Added tests to increase coverage
@@ -7,7 +16,7 @@
 
 - **Documentation**
   - Fix images in README file
-    - Files formatted according to dartfmt.
+  - Files formatted according to dartfmt.
 
 ## 2.0.1
 

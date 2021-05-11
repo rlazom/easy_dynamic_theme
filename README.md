@@ -36,7 +36,7 @@ of the `pubspec.yaml` file as follow:
 dependencies:  
   flutter: 
     sdk: flutter  
- easy_dynamic_theme: ^2.1.0
+ easy_dynamic_theme: ^2.2.0
  ```
 
 Then run the command `flutter packages get` on the console.  
@@ -173,3 +173,4 @@ bool isDarkModeOn = Theme.of(context).brightness == Brightness.dark;
 
 - **EasyDynamicThemeBtn**, which is (kind of) a *FlatButton* that displays the icon according to the current theme of your app and allows you to switch between them.
 - **EasyDynamicThemeSwitch**, which is a *Switch* widget, based on the current theme's brightness of your context and allows you to switch between **light/dark** them.
+- **EasyDynamicThemeAutoSwitch**, which is a *Switch* widget, based on the current theme of your app and allows you to prioritize (or not) your OS defined brightness.

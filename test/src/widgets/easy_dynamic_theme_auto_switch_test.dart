@@ -22,8 +22,7 @@ void main() {
       expect(find.byKey(Key('loading')), findsOneWidget);
     });
 
-    testWidgets(
-        'should show the Switch with value for the default case - true',
+    testWidgets('should show the Switch with value for the default case - true',
         (WidgetTester tester) async {
       mockSharedPreferencesService = MockSharedPreferencesService();
 
