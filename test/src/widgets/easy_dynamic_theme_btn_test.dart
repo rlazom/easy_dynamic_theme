@@ -1,5 +1,4 @@
 import 'package:easy_dynamic_theme/src/services/shared_preferences_service.dart';
-import 'package:easy_dynamic_theme/src/widgets/easy_dynamic_theme_btn.dart';
 import 'package:easy_dynamic_theme/easy_dynamic_theme.dart';
 import 'package:mockito/mockito.dart';
 import 'package:flutter/material.dart';

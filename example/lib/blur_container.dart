@@ -9,11 +9,11 @@ class BlurContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ClipRect(
-      child: new Container(
+      child: Container(
         decoration: BoxDecoration(border: Border.all(width: 2)),
-        child: new BackdropFilter(
-          filter: new ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
-          child: new Padding(
+        child: BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
+          child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: child,
           ),

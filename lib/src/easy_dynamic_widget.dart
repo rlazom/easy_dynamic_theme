@@ -50,7 +50,7 @@ class _EasyDynamicThemeWidgetState extends State<EasyDynamicThemeWidget> {
 
   /// Loads the Shared Preferences data stored on your device to build the UI accordingly
   Future _loadSharedPreferences() async {
-    _prefs = new SharedPreferencesService();
+    _prefs = SharedPreferencesService();
     if (widget.initialThemeMode != null) {
       themeMode = widget.initialThemeMode;
       _prefs.loadInstance();

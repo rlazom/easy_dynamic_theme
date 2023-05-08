@@ -6,7 +6,7 @@ import 'home.dart';
 void main() async {
   runApp(
     EasyDynamicThemeWidget(
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
@@ -14,16 +14,19 @@ void main() async {
 class MyApp extends StatelessWidget {
   final String title = 'EDT - Example';
 
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: title,
+      debugShowCheckedModeBanner: false,
+      theme: lightThemeData,
+      darkTheme: darkThemeData,
+      themeMode: EasyDynamicTheme.of(context).themeMode,
+      home: MyHomePage(
         title: title,
-        debugShowCheckedModeBanner: false,
-        theme: lightThemeData,
-        darkTheme: darkThemeData,
-        themeMode: EasyDynamicTheme.of(context).themeMode,
-        home: new MyHomePage(
-          title: title,
-        ));
+      ),
+    );
   }
 }

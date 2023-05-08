@@ -17,10 +17,10 @@ class EasyDynamicThemeBtn extends StatelessWidget {
       key: Key('EasyDynamicThemeBtn'),
       shape: CircleBorder(),
       onPressed: EasyDynamicTheme.of(context).changeTheme,
-      child: new Padding(
+      child: Padding(
         padding: const EdgeInsets.all(12.0),
-        child: new Icon(_getIcon(context),
-            color: Theme.of(context).textTheme.button!.color),
+        child: Icon(_getIcon(context),
+            color: Theme.of(context).textTheme.labelLarge!.color),
       ),
     );
   }

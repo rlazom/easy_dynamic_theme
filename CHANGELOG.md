@@ -1,3 +1,9 @@
+# 2.3.0
+
+- **Features**
+  - Remove deprecated widgets
+  - Remove deprecated version of the Android embedding in example app
+
 # 2.2.0
 
 - **Features**
