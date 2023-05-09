@@ -1,6 +1,6 @@
 name: easy_dynamic_theme
 description: Automatically get your OS defined Theme (Dynamic), force your prefered one (Light / Dark) and persist your choice in the device.
-version: 2.3.0
+version: 2.3.1
 homepage: "https://github.com/rlazom/easy_dynamic_theme"
 
 environment:
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: ^2.1.0
+  shared_preferences: ^2.1.1
 
 dev_dependencies:
   flutter_lints: ^2.0.1

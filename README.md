@@ -9,6 +9,7 @@ Automatically get your OS defined Theme (Dynamic), force your prefered one (Ligh
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5f373592e0b3471e8f62229df15de60f)](https://app.codacy.com/gh/rlazom/easy_dynamic_theme?utm_source=github.com&utm_medium=referral&utm_content=rlazom/easy_dynamic_theme&utm_campaign=Badge_Grade_Settings)
 [![codecov](https://codecov.io/gh/rlazom/easy_dynamic_theme/branch/master/graph/badge.svg)](https://codecov.io/gh/rlazom/easy_dynamic_theme)
 ![GitHub](https://img.shields.io/github/license/rlazom/easy_dynamic_theme)
+[![BuyMeACoffee][buy_me_a_coffee_badge]][buy_me_a_coffee]
 
 Easy peasy, don't you think? ;)
 
@@ -174,3 +175,7 @@ bool isDarkModeOn = Theme.of(context).brightness == Brightness.dark;
 - **EasyDynamicThemeBtn**, which is (kind of) a *FlatButton* that displays the icon according to the current theme of your app and allows you to switch between them.
 - **EasyDynamicThemeSwitch**, which is a *Switch* widget, based on the current theme's brightness of your context and allows you to switch between **light/dark** them.
 - **EasyDynamicThemeAutoSwitch**, which is a *Switch* widget, based on the current theme of your app and allows you to prioritize (or not) your OS defined brightness.
+
+<!-- Links -->
+[buy_me_a_coffee]: https://www.buymeacoffee.com/rlazom
+[buy_me_a_coffee_badge]: https://img.shields.io/badge/donate-buymeacoffee-yellow?logo=buymeacoffee

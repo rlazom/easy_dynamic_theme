@@ -1,3 +1,8 @@
+# 2.3.1
+- **Documentation**
+  - Add buymeacoffee link on readme file
+  - Upgrade dependency version to latest (shared_preferences: 2.1.1)
+  
 # 2.3.0
 
 - **Features**
